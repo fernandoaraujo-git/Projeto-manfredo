@@ -22,9 +22,9 @@ um banco de dados relacional para armazenamento das informações.
 
 ##  Arquitetura de Nuvem
 
-Para o projeto, recomenda-se a utilização de uma **nuvem pública**,
+Para o projeto, recomenda-se a utilização de uma nuvem pública,
 
-utilizando o modelo de serviço **PaaS (Platform as a Service)**.
+utilizando o modelo de serviço PaaS (Platform as a Service).
 
 A escolha da nuvem pública permite que a aplicação seja disponibilizada
 
@@ -42,7 +42,7 @@ infraestrutura.
 
 A arquitetura pode ser organizada da seguinte maneira:
 
-**Usuário → Internet → Aplicação Web → Banco de Dados MariaDB**
+Usuário → Internet → Aplicação Web → Banco de Dados MariaDB
 
 A aplicação web é responsável pelo funcionamento do sistema, enquanto o
 
@@ -60,37 +60,37 @@ a integração entre as etapas do projeto.
 
 As principais etapas consideradas foram:
 
-1. **Planejamento (Plan)**  
+1. Planejamento Plan  
 
    Definição dos requisitos e das funcionalidades do sistema.
 
-2. **Desenvolvimento (Code)**  
+2. Desenvolvimento Code 
 
    Criação da aplicação utilizando HTML, CSS e JavaScript.
 
-3. **Construção (Build)**  
+3. Construção Build
 
    Organização dos arquivos e preparação da aplicação para execução.
 
-4. **Testes (Test)**  
+4. Testes Test 
 
    Verificação do funcionamento das funcionalidades e da comunicação
 
    com o banco de dados.
 
-5. **Lançamento (Release)**  
+5. Lançamento Release  
 
    Preparação da versão da aplicação para disponibilização.
 
-6. **Implantação (Deploy)**  
+6. Implantação Deploy  
 
    Disponibilização da aplicação no ambiente escolhido.
 
-7. **Operação (Operate)**  
+7. Operação Operate  
 
    Acompanhamento do funcionamento da aplicação e do banco de dados.
 
-8. **Monitoramento (Monitor)**  
+8. Monitoramento Monitor 
 
    Observação do desempenho e identificação de possíveis problemas.
 
@@ -102,6 +102,6 @@ sistema.
 
 ##  Equipe
 
-Projeto desenvolvido pelos integrantes: Matheus, João, Fernando, Raphael e Gabriel como parte das atividades
+Projeto desenvolvido pelos integrantes: Matheus, João, Fernando e Gabriel como parte das atividades
 
 acadêmicas.
