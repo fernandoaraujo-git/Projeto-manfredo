@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechManaus - Módulo Auth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>TechManaus - API</h1>
+        <button id="btn-tema">🌓 Trocar Tema</button>
+    </div>
+
+    <div class="grid">
+        <!-- Autenticação e Cadastro -->
+        <div>
+            <div class="card" style="margin-bottom: 20px;">
+                <h2>Login</h2>
+                <form id="formLogin">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginSenha" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Cadastrar Usuário</h2>
+                <form id="formCadastro">
+                    <input type="text" id="nome" placeholder="Nome" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Listagem de Banco -->
+        <div class="card">
+            <h2>Banco de Dados</h2>
+            <button id="btnAtualizar" style="margin-bottom: 15px;">Atualizar Lista</button>
+            <pre id="output">Os dados aparecerão aqui...</pre>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
