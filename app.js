@@ -75,5 +75,61 @@ async function carregarUsuarios() {
     }
 }
 
+// DELETE - Remover Usuário pelo ID
+document.getElementById('formDelete').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('deleteId').value;
+
+    if (!confirm(`Tem certeza que quer apagar o usuário ID ${id}?`)) return;
+
+    try {
+        const res = await fetch(`${API_URL}/usuarios/${id}`, {
+            method: 'DELETE'
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+            alert(data.mensagem);
+            carregarUsuarios();
+            document.getElementById('deleteId').value = '';
+        } else {
+            alert('Erro: ' + data.erro);
+        }
+    } catch (err) {
+        console.error('🚩 Falha ao deletar:', err);
+        alert('Erro de conexão ao tentar deletar.');
+    }
+}); // <-- Estava faltando fechar essa função aqui
+
+// PUT - Atualizar Usuário pelo ID
+document.getElementById('formUpdate').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('updateId').value;
+    const payload = {
+        nome: document.getElementById('updateNome').value,
+        email: document.getElementById('updateEmail').value
+    };
+
+    try {
+        const res = await fetch(`${API_URL}/usuarios/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+            alert(data.mensagem);
+            carregarUsuarios();
+            document.getElementById('formUpdate').reset();
+        } else {
+            alert('Erro: ' + data.erro);
+        }
+    } catch (err) {
+        console.error('Falha ao atualizar:', err);
+        alert('Erro de conexão ao tentar atualizar.');
+    }
+});
+
 document.getElementById('btnAtualizar').addEventListener('click', carregarUsuarios);
 carregarUsuarios();

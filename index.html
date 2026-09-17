@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechManaus - Módulo Auth</title>
+    <title>Teste de CRUD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="header">
-        <h1>TechManaus - API</h1>
+        <h1>Teste De CRUD</h1>
         <button id="btn-tema">🌓 Trocar Tema</button>
     </div>
 
@@ -42,7 +42,25 @@
             <button id="btnAtualizar" style="margin-bottom: 15px;">Atualizar Lista</button>
             <pre id="output">Os dados aparecerão aqui...</pre>
         </div>
+        
+        <div class="card" style="margin-top: 20px;">
+            <h2>💀 Excluir Usuário</h2>
+            <form id="formDelete">
+                <input type="number" id="deleteId" placeholder="ID do Usuário" required>
+                <button type="submit" style="background: #ef4444; color: #fff;">Deletar Usuário</button>
+            </form>
+        </div>
+    <!-- Adiciona abaixo do card de exclusão no index.html -->
+    <div class="card" style="margin-top: 20px;">
+        <h2>Atualizar Usuário</h2>
+        <form id="formUpdate">
+            <input type="number" id="updateId" placeholder="ID do Usuário" required>
+            <input type="text" id="updateNome" placeholder="Novo Nome" required>
+            <input type="email" id="updateEmail" placeholder="Novo Email" required>
+            <button type="submit" style="background: #3b82f6; color: #fff;">Salvar Alterações</button>
+        </form>
     </div>
+
 
     <script src="app.js"></script>
 </body>
