@@ -17,6 +17,6 @@ pool.getConnection()
         console.log('MariaDB em funcionamento! Conexão estabelecida com sucesso.');
         conn.release();
     })
-    .catch(err => console.error('🚩 Panic no DB:', err.message));
+    .catch(err => console.error('Panic0 no DB:', err.message));
 
 module.exports = pool;

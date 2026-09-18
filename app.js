@@ -28,10 +28,10 @@ document.getElementById('formLogin').addEventListener('submit', async (e) => {
         });
         const data = await res.json();
         
-        if (res.ok) alert(`Bem-vindo, ${data.usuario.nome}! 🔥`);
+        if (res.ok) alert(`Bem-vindo, ${data.usuario.nome}! 🤓`);
         else alert('Erro: ' + data.erro);
     } catch (err) {
-        console.error('🚩 API Offline:', err);
+        console.error('API Offline:', err);
         alert('Erro de conexão.');
     }
 });
@@ -60,7 +60,7 @@ document.getElementById('formCadastro').addEventListener('submit', async (e) => 
             alert('Erro: ' + data.erro);
         }
     } catch (err) {
-        console.error('🚩 Falha na requisição:', err);
+        console.error('Falha na requisição:', err);
     }
 });
 
@@ -71,7 +71,7 @@ async function carregarUsuarios() {
         const data = await res.json();
         document.getElementById('output').textContent = JSON.stringify(data, null, 2);
     } catch (err) {
-        document.getElementById('output').textContent = '🚩 Erro ao buscar dados. Backend operante?';
+        document.getElementById('output').textContent = 'Erro ao buscar dados. Backend Não operante';
     }
 }
 
@@ -96,12 +96,10 @@ document.getElementById('formDelete').addEventListener('submit', async (e) => {
             alert('Erro: ' + data.erro);
         }
     } catch (err) {
-        console.error('🚩 Falha ao deletar:', err);
+        console.error('Falha ao deletar:', err);
         alert('Erro de conexão ao tentar deletar.');
     }
-}); // <-- Estava faltando fechar essa função aqui
-
-// PUT - Atualizar Usuário pelo ID
+}); 
 document.getElementById('formUpdate').addEventListener('submit', async (e) => {
     e.preventDefault();
     const id = document.getElementById('updateId').value;
